@@ -1,0 +1,192 @@
+@import colors
+@import prefixes
+@import extraIg
+
+.ig
+    @import basics
+.ig.base
+    width 528px
+    height 306px
+    overflow hidden
+    position relative
+    h3
+        position absolute
+        top 0px
+        left 18px
+        margin 0px
+        color white
+        background HNBlue
+        padding 2px 12px 0px 12px
+        font-weight normal
+        font-size 0.72em
+        text-transform uppercase
+        border-bottom-left-radius 2px
+        border-bottom-right-radius 2px
+    .detailsLink
+        position absolute
+        right 0px
+        top 9px
+        font-size 0.72em
+        color #FFF
+        background #6f6f6f
+        text-decoration none
+        padding 2px 5px 1px 9px
+        border-top-left-radius 2px
+        border-bottom-left-radius 2px
+        span.raquo
+            position relative
+            padding-left 4px
+            top -1px
+        &:hover .content
+            text-decoration underline
+
+    .pekac
+        background-image iurl('bg.jpg')
+        .barchartArea
+            width 482px
+            margin-left 25px
+            padding-bottom 5px
+            padding-top 272px
+            overflow hidden
+            .barchartBelt
+                position absolute
+                height 202px
+                top 70px
+                margin-left 25px
+                left 0px
+                width 3000px
+                overflow hidden
+                transition left 0.8s
+                .party
+                    width 73px
+                    position relative
+                    float left
+                    height @height
+                    innerWidth = 43px
+                    .value
+                        width innerWidth
+                        color white
+                        background #6f6f6f
+                        position absolute
+                        bottom 25px
+                        left 0px
+                        font-size 0.8em
+                        text-align center
+                        cursor help
+                    .name
+                        width (innerWidth + 20px)
+                        color black
+                        position absolute
+                        bottom 0px
+                        left -10px
+                        font-size 0.72em
+                        text-align center
+                        height 20px
+                    .bar
+                        position absolute
+                        bottom 51px
+                        left 0px
+                        width innerWidth
+                        background #7b94d0
+                        &.empty
+                            background #a5a5a5
+                            transition 0.3s
+                            &:hover
+                                cursor help
+                                background lighten(#a5a5a5, 20%)
+                        .mandat
+                            width 100%
+                            position absolute
+                            border-top 1px solid #ededed
+                            &:last-child
+                                border-top 0px none
+                            transition 0.3s
+                            &:hover
+                                cursor help
+                                background lighten(#7b94d0, 35%)
+
+
+        .supplemental
+            position absolute
+            top 46px
+            right 15px
+            width 100px
+            height 100px
+            .processed
+            .attendance
+                position absolute
+                top 0px
+                width 81px
+                height 102px
+                .txt
+                    position absolute
+                    bottom 0px
+                    left 0px
+                    font-size 0.8em
+                    text-align center
+                    width 100%
+                .value
+                    position absolute
+                    top 31px
+                    left 0px
+                    width 100%
+                    height 81px
+                    border-radius 50%
+                    text-align center
+                    font-size 1.3em
+                    span
+                        font-size 0.65em
+                svg
+                    width 81px
+                    height 81px
+                    path.actual
+                        fill #868889
+
+            .attendance
+                right 10px
+
+        .paginator
+            position absolute
+            top 46px
+            right 150px
+            color darken(#7b94d0, 40%)
+            font-size 0.9em
+            letter-spacing 0.2em
+            padding 0px 18px
+            .leftArrow
+            .rightArrow
+                &:hover
+                    cursor pointer
+                top -3px
+                position absolute
+                width 25px
+                height 25px
+                div
+                    position absolute
+                    top 8px
+                    border-top 5px solid transparent
+                    border-bottom 5px solid transparent
+            .leftArrow
+                left 0px
+                div
+                    right 11px
+                    border-right 5px solid @color
+                &:hover div
+                    border-right-color lighten(@color, 45%)
+            .rightArrow
+                right 0px
+                div
+                    left 10px
+                    border-left 5px solid @color
+                &:hover div
+                    border-left-color lighten(@color, 45%)
+
+    .mandatArea
+        float left
+        clear left
+        width 100%
+        background #d7d7d7
+        color #505050
+        font-size 0.8em
+        padding 4px 10px
+
