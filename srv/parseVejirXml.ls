@@ -38,6 +38,7 @@ countries .= map ->
         seats = parseInt it.seats.0, 10
         [name, seats]
     parties .= filter (.2 != 1)
+    groups .= filter (.0 != "TOTAL")
     {code, parties, groups}
 
 fs.writeFile "#__dirname/../data/eu-countries.json", JSON.stringify countries
