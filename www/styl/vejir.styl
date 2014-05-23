@@ -1,0 +1,49 @@
+.ig.vejir
+    width 528px
+    height 163px
+    background #ededee
+    h3
+        font-size 1em
+        color #406c94
+        padding 8px 10px
+        margin 0px
+    span.helpArea
+        display block
+        float left
+        width 215px
+        color #505050
+        padding 0px 10px
+        font-size 0.8em
+    svg
+        position absolute
+        bottom 4px
+        right 10px
+        path:hover
+            opacity 0.7
+            cursor help
+    a
+        position absolute
+        font-size 0.8em
+        bottom 12px
+        left 10px
+        text-decoration none
+        .raquo
+            position relative
+            top -2px
+        .content
+            text-decoration underline
+        &:hover .content
+            text-decoration none
+    div.bar
+        position absolute
+        top 50px
+        right 10px
+        height 40px
+        width 300px
+        .group
+            height @height
+            float left
+            background red
+            &:hover
+                opacity 0.7
+                cursor help

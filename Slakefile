@@ -15,9 +15,11 @@ externalStyles =
 externalData =
     style: "#__dirname/www/screen.css"
     vysledky: "#__dirname/data/vysledky.json"
+    vysledky_eu: "#__dirname/data/eu-groups.json"
+
 
 preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
-deferScripts = <[ base.js pekac.js ]>
+deferScripts = <[ base.js pekac.js vejir.js ]>
 develOnlyScripts = <[ _loadData.js _loadExternal.js]>
 gzippable = <[ ]>
 build-styles = (options = {}, cb) ->
