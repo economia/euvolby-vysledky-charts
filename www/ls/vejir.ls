@@ -1,10 +1,11 @@
+return if not ig.containers.vejir
 container = d3.select ig.containers.vejir
 
 container.append \h3
-    ..html "Složení evropského parlamentu"
-container.append \a
-    ..attr \href \#
-    ..html "<span class='content'>Detailní evropské výsledky</span> <span class='raquo'>&raquo</span>"
+    ..html "Složení Evropského parlamentu"
+# container.append \a
+#     ..attr \href \#
+#     ..html "<span class='content'>Detailní evropské výsledky</span> <span class='raquo'>&raquo</span>"
 helpArea = container.append \span
     ..attr \class \helpArea
 
@@ -19,6 +20,7 @@ descriptions =
     "S&D"        : "Sociální demokraté, česká ČSSD"
     "GUE/NGL"    : "Komunisté, česká KSČM"
     "EPP"        : "Lidovci, čeští KDU-ČSL a TOP 09"
+    "Others"     : "Ostatní, dosud nerozřazené strany"
 
 colors =
     "ALDE"       : \#FFD700

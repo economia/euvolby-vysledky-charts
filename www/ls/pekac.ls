@@ -7,10 +7,10 @@ barchartArea = pekac.append \div
 barchartBelt = barchartArea.append \div
     ..attr \class \barchartBelt
 formatPercents = ({hlasy}) ->
-    if hlasy > 0.1
-        "#{Math.round hlasy * 100} %"
-    else
-        "#{(hlasy * 100).toFixed 1 .replace '.' ','} %"
+    # if hlasy > 0.1
+    #     "#{Math.round hlasy * 100} %"
+    # else
+    "#{(hlasy * 100).toFixed 1 .replace '.' ','} %"
 
 {strany, ucast} = ig.data.vysledky
 y = d3.scale.linear!

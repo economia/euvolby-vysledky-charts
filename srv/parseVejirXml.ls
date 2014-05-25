@@ -2,10 +2,10 @@ require! {
     fs
     xml2js
 }
-download = no
+download = yes
 doDownload = (cb) ->
     require! request
-    (err, res, body) <~ request.get "http://www.results-elections2014.eu/xml/2009/data.xml"
+    (err, res, body) <~ request.get "http://www.results-elections2014.eu/xml/2014/data.xml"
     console.log err if err
     cb null, body
     fs.writeFile "#__dirname/../data/vysledky_e.xml", body
@@ -21,13 +21,17 @@ groups .= map ->
     {name, seats, percent}
 groups .= filter (.percent != 1)
 fs.writeFile "#__dirname/../data/eu-groups.json", JSON.stringify groups
+# return
 # console.log groups
 countries = xml.root.countryresults.0.country
 # console.log countries
 # countries.length = 1
+countries .= filter -> it.countryparty
 countries .= map ->
     code = it.countrycode.0
     # console.log it.countryparty.0.resultbyparty
+    # console.log "----AAAA----"
+    console.log it.countryparty
     parties = it.countryparty.0.resultbyparty.map ->
         name = it.partyname.0
         seats = parseInt it.seats.0, 10
