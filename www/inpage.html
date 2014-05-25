@@ -403,58 +403,196 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div id="dlazdice" style="width: 530px; height: 380px; overflow: hidden; margin-bottom: 20px;">
 
 
-<!--[if lt IE 9]>
-    <script src="http://service.ihned.cz/js/aight/v1.2.1.min.js"></script>
-<![endif]-->
-<div data-ig="base">V·ö prohlÌûeË je bohuûel zastaral˝ a nepodporuje interaktivnÌ vizualizace. DoporuËujeme jej aktualizovat, <a target="_blank" href="http://www.browserchoice.eu/">st·hnout jin˝</a> nebo pouûÌt <a target="_blank" href="http://www.google.com/chromeframe">Google Chrome Frame</a> ñ na to nepot¯ebujete souhlas IT&nbsp;oddÏlenÌ :-)</div>
-<style>
-    #dlazdice-container {
-        background: #ededee;
-        float: left;
-        padding-bottom: 6px;
-    }
-    #dlazdice-container h3 {
-        font-size: 1.2em;
-        color: #406c94;
-        padding: 8px 10px;
-        margin: 0px;
-    }
-    #dlazdice-container ul {
-        margin: 0px 0px 0px 10px;
-    }
-    #dlazdice-container li {
-        float: left;
-        width: 215px;
-        position: relative;
-        list-style-type: none;
-        list-style-image: none;
-        padding: 0px 20px 6px 25px;
-        color: #505050;
-    }
-    #dlazdice-container li.clear {
-        clear: left;
-    }
-    #dlazdice-container li:before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 0px;
-        width: 9px;
-        height: 9px;
-        background: #7b94d0;
-    }
-</style>
-<div id="dlazdice-container">
-    <h3>Koment·¯e k volb·m do EP</h3>
-    <ul>
-        <li>NejsilnÏjöÌ frakcÌ v europarlamentu bude Evropsk· lidov· strana (28 %) sdruûujÌcÌ st¯edoprav· uskupenÌ.</li>
-        <li>NejsilnÏjöÌ politickou stranou v ÿecku se po volb·ch stala opoziËnÌ Koalice radik·lnÌ levice. ZÌskala 30 % hlas˘</li>
-        <li class="clear">Do slovensk˝ volebnÌch mÌstnostÌ p¯iölo necel˝ch 13 % voliË˘. NejmÈnÏ ze vöech zemÌ EU, kde se hlasovalo</li>
-        <li>V z·padnÌch zemÌch v minulosti z·jem o eurovolby klesal, teÔ se ale zv˝öil. NÏmecko dokonce hl·sÌ ˙Ëast aû 48 %</li>
-    </ul>
-</div>
-<div data-ig="vejir">V·ö prohlÌûeË je bohuûel zastaral˝ a nepodporuje interaktivnÌ vizualizace. DoporuËujeme jej aktualizovat, <a target="_blank" href="http://www.browserchoice.eu/">st·hnout jin˝</a> nebo pouûÌt <a target="_blank" href="http://www.google.com/chromeframe">Google Chrome Frame</a> ñ na to nepot¯ebujete souhlas IT&nbsp;oddÏlenÌ :-)</div>
-<script src="script.js" charset="utf-8" async></script>
+            <style>
+            #dlazdice-container {
+                width: 530px;
+                height: 298px;
+                margin:0;
+                padding:0;
+                position:absolute;
+                background: #ededee;
+            }
+            #dlazdice html, div#dlazdice {width:528px; height:298px;font-family: Arial}
+            #dlazdice body,html,div,h1,p  {margin:0;padding:0;border:0;}
+            #dlazdice html  {background-color: #fff;overflow:hidden;}
+
+            #dlazdice div#dlazdice {
+              background-color: #ededee;
+              border:1px solid #dadadc;
+            }
+
+            #dlazdice #temadne  {
+              background-color: #38c5e6;
+              color: #fff;
+              position: absolute;
+              left: 10px;
+              top: 1px;
+              width: 100px;
+              height: 19px;
+              font-size: 12px;
+              font-family: "Arial";
+              color: rgb( 255, 255, 255 );
+              line-height: 1.5;
+              text-align: center;
+
+            }
+
+            #dlazdice #titulek  {
+              font-size: 19px;
+              font-family: "Arial";
+              color: rgb( 0, 158, 224 );
+              font-weight: bold;
+              line-height: 1.211;
+              text-align: left;
+              position: absolute;
+              left: 10px;
+              top: 30px;
+              width: 510px;
+              height: 19px;
+            }
+
+            #dlazdice a, a:hover, a:visited  {text-decoration: none;}
+            #dlazdice #jin  {
+              font-size: 11px;
+              font-family: "Arial";
+              color: rgb( 226, 0, 122 );
+              font-weight: bold;
+              line-height: 1.636;
+              text-align: left;
+              position: absolute;
+              left: 10px;
+              top: 60px;
+              width: 180px;
+              height: 226px;
+              border-right:1px solid #b1b3b4;
+              padding-right:10px;
+              }
+            #dlazdice #jang  {
+              font-size: 11px;
+              font-family: "Arial";
+              color: rgb( 226, 0, 122 );
+              font-weight: bold;
+              line-height: 1.636;
+              text-align: left;
+              position: absolute;
+              left: 217px;
+              top: 60px;
+              width: 280px;
+              height: 226px;
+
+            }
+
+
+
+            #dlazdice #jintitle, #jangtitle   {
+                text-transform: uppercase;
+            }
+
+            #dlazdice #k1, #k2, #k3  {
+                height:105px;
+            }
+
+            #dlazdice #k1 h2, #k2 h2, #k3 h2  {
+                font-size: 14px;
+                font-family: "Arial";
+                color: rgb( 64, 108, 148 );
+                font-weight: bold;
+                line-height: 1.214;
+                text-align: left;
+                margin:0;
+            }
+
+
+            #dlazdice #k1 img, #k2 img, #k3 img  {
+                width:100px;
+                height:53px;
+            }
+
+            #dlazdice #k1 .img, #k2 .img, #k3 .img  {
+                float:left;
+                width: 110px;
+            }
+            #dlazdice #k1 a p, #k2 a p, #k3 a p  {
+              font-size: 13px;
+              font-family: "Arial";
+              color: rgb( 80, 80, 80 );
+              line-height: 1.385;
+              text-align: left;
+              font-weight: normal;
+              text-decoration: none;
+            }
+
+            #dlazdice #k4  {
+
+            }
+
+            #dlazdice #k4 img  {
+                width:300px;
+                height:170px;
+            }
+
+            #dlazdice #k4 .img  {
+                float:left;
+                width: 170px;
+            }
+            #dlazdice #k4 a p {
+              font-size: 14px;
+              font-family: "Arial";
+              color: rgb( 64, 108, 148 );
+              font-weight: bold;
+              line-height: 1.214;
+              text-align: left;
+              text-decoration: none;
+              position:absolute;
+              top:193px;
+              left:0px;
+            }
+            </style>
+            <link rel="stylesheet" href="http://ihned.cz/img/videoplayer/i11/skin_allsizes.css" />
+            <script type="text/javascript" src="http://ihned.cz/js/flashDetection.js"></script>
+            <script type="text/javascript" src="http://81.95.101.3/img/videoplayer/i11/swfobject.js"></script>
+            <script type="text/javascript" src="http://ihned.cz/js/jquery.utils.js" charset="utf-8"></script>
+            <script type="text/javascript" src="http://ihned.cz/js/jquery.jplayer.js" charset="utf-8"></script>
+            <script type="text/javascript" src="http://ihned.cz/js/jquery-ui-1.8.11.custom.min.js"></script>
+            <script type="text/javascript" src="http://ihned.cz/js/nh5mp.js" charset="utf-8"></script>
+            <script type="text/javascript" src="http://ihned.cz/js/nh5mpEnhancing.js"></script>
+            <script type="text/javascript" src="http://service.ihned.cz/mmplayer/mmplayer2.js"></script>
+            <!--[if lt IE 9]>
+                <script src="http://service.ihned.cz/js/aight/v1.2.1.min.js"></script>
+            <![endif]-->
+            <div data-ig="base">V√°≈° prohl√≠≈æeƒç je bohu≈æel zastaral√Ω a nepodporuje interaktivn√≠ vizualizace. Doporuƒçujeme jej aktualizovat, <a target="_blank" href="http://www.browserchoice.eu/">st√°hnout jin√Ω</a> nebo pou≈æ√≠t <a target="_blank" href="http://www.google.com/chromeframe">Google Chrome Frame</a> ‚Äì na to nepot≈ôebujete souhlas IT&nbsp;oddƒõlen√≠ :-)</div>
+            <div id="dlazdice-container">
+
+
+                <div id='temadne'>T…MA DNE</div>
+
+            <div id="titulek" class="bg1"><span id="ttpoutak">Jak se hlasovalo ve mÏstech a vesnicÌch. A pro koho</span></div>
+
+            <div id="jin">
+                <span id="jintitle">Grafika</span>
+                <div id="k1"><a href="http://data.blog.ihned.cz/c1-62241570-nejvic-preferencnich-hlasu-dostal-jiri-pospisil-druhy-je-jan-keller-prohlednete-si-kompletni-tabulku" target="_parent" onClick="_gaq.push(['_trackEvent', '/dlazdice/koment1', 'http://data.blog.ihned.cz/c1-62241570-nejvic-preferencnich-hlasu-dostal-jiri-pospisil-druhy-je-jan-keller-prohlednete-si-kompletni-tabulku']);">
+                    <h2>KompletnÌ tabulka preferenËnÌch hlas˘</h2>
+                    <p>NejvÌc p¯ednostnÌch hlas˘ dostal Ji¯Ì PospÌöil, kter˝ kandidoval za TOP 09. Druh˝ nej˙spÏönÏjöÌ byl Jan Keller v oranûov˝ch barv·ch. Do prvnÌ desÌtky se dostali takÈ znovuzvolenÌ europoslanci za ODS Jan Zahradil a Evûen Toöenovsk˝.</p></a>
+                </div>
+
+            </div>
+
+            <div id="jang">
+                <span id="jangtitle">Mapa</span>
+                <div id="k4"><a href="http://data.blog.ihned.cz/c1-62241760-podivejte-se-kdo-vyhral-u-vas-vysledky-voleb-ve-vsech-obcich" target="_parent" onClick="_gaq.push(['_trackEvent', '/dlazdice/koment2', 'http://data.blog.ihned.cz/c1-62241760-podivejte-se-kdo-vyhral-u-vas-vysledky-voleb-ve-vsech-obcich']);">
+                    <span class="img"><img src="http://img.ihned.cz/attachment.php/480/54423480/b6ID5VGScNh4EqyTLafPWtrHgm7OvK8C/Snimek_obrazovky_2014-05-22_v_20.53.25.jpg"></span>
+                    <p>PodÌvejte se, kdo vyhr·l u v·s: V˝sledky voleb ve vöech obcÌch</p></a>
+                </div>
+
+            </div>
+
+            <script>
+            _gaq.push(['_trackEvent', '/dlazdice/loaded','l12']);
+            </script>
+
+            </div>
+            <div data-ig="vejir"></div>
+            <script src="http://service.ihned.cz/euvolby-vysledky-barchart/script.js" charset="utf-8" async></script>
 
         </div>
 
