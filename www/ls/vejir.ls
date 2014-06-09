@@ -3,9 +3,9 @@ container = d3.select ig.containers.vejir
 
 container.append \h3
     ..html "Složení Evropského parlamentu"
-# container.append \a
-#     ..attr \href \#
-#     ..html "<span class='content'>Detailní evropské výsledky</span> <span class='raquo'>&raquo</span>"
+container.append \a
+    ..attr \href \http://data.blog.ihned.cz/c1-62242000-mapa-jak-dopadly-volby-v-ostatnich-zemich-evropske-unie
+    ..html "<span class='content'>Detailní evropské výsledky</span> <span class='raquo'>&raquo</span>"
 helpArea = container.append \span
     ..attr \class \helpArea
 
